@@ -1,18 +1,242 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop Cart</title>
-    <link rel="stylesheet" href="normalize.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="normalize.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <h1>Ваша корзина</h1>
-    <h2>LATO Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
-</body>
-
+  <body class="page">
+    <div class="container">
+      <header class="page__header header">
+        <div class="header__top">
+          <h1 class="visually-hidden">Интернет магазин меаком</h1>
+        </div>
+        <div class="header__bottom">
+          <a class="header__cart-info cart-info" href="#">
+            <span class="cart-info__title">Ваша корзина</span>
+            <span class="cart-info__count">3 товара</span>
+            <span class="cart-info__total">50 576 ₽</span>
+          </a>
+        </div>
+      </header>
+      <main class="page__main">
+        <nav class="breadcrumbs">
+          <ul class="breadcrumbs__list list-reset">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Корзина</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="section cart">
+          <form action="#" method="post" class="cart__form">
+            <div class="cart__top">
+              <h2 class="section__title cart__title">Ваша корзина</h2>
+              <span class="cart__count">4 товара</span>
+              <button class="cart__btn-clear" type="button">Очистить корзину</button>
+            </div>
+            <ul class="cart__products cart-products list-reset">
+              <li class="cart-products__item">
+                <img
+                  src="img/products/p1.png"
+                  alt="Вытяжное устройство G2H"
+                  class="cart-products__thumb" />
+                <h3 class="cart-products__title">Вытяжное устройство G2H</h3>
+                <span class="cart-products__descr"
+                  >12-72/168 м<sup>3</sup>/ч / гидрорегулируемый расход / от датчика
+                  присутствия</span
+                ><span class="cart-products__article">Артикул: G2H1065</span>
+                <div class="cart-products__controls count-controls">
+                  <button class="count-controls__btn count-controls__btn--minus" type="button">
+                    <span class="visually-hidden">Убрать единицу товара</span>
+                  </button>
+                  <input
+                    class="count-controls__prod-count"
+                    type="number"
+                    name="count-p1"
+                    min="1"
+                    max="99"
+                    value="1" />
+                  <button class="count-controls__btn count-controls__btn--plus" type="button">
+                    <span class="visually-hidden">Добавить единицу товара</span>
+                  </button>
+                </div>
+                <span class="cart-products__price-one">12 644 ₽/шт. </span>
+                <div class="cart-products__total">12 644 ₽</div>
+                <button type="button" class="cart-products__btn-delete">
+                  <span class="visually-hidden">Удалить с товар с корзины</span>
+                </button>
+              </li>
+              <li class="cart-products__item">
+                <img
+                  src="img/products/p2.png"
+                  alt="Вытяжное устройство BXC"
+                  class="cart-products__thumb" />
+                <h3 class="cart-products__title">Вытяжное устройство BXC</h3>
+                <span class="cart-products__descr"
+                  >12-72/168 м<sup>3</sup>/ч / гидрорегулируемый расход / от датчика
+                  присутствия</span
+                ><span class="cart-products__article">Артикул: G2H1065</span>
+                <div class="cart-products__controls count-controls">
+                  <button class="count-controls__btn count-controls__btn--minus" type="button">
+                    <span class="visually-hidden">Убрать единицу товара</span>
+                  </button>
+                  <input
+                    class="count-controls__prod-count"
+                    type="number"
+                    name="count-p2"
+                    min="1"
+                    max="99"
+                    value="1" />
+                  <button class="count-controls__btn count-controls__btn--plus" type="button">
+                    <span class="visually-hidden">Добавить единицу товара</span>
+                  </button>
+                </div>
+                <span class="cart-products__price-one">12 644 ₽/шт.</span>
+                <div class="cart-products__total">25 288 ₽</div>
+                <button type="button" class="cart-products__btn-delete">
+                  <span class="visually-hidden">Удалить с товар с корзины</span>
+                </button>
+              </li>
+              <li class="cart-products__item">
+                <img
+                  src="img/products/p3.png"
+                  alt="Вытяжное устройство GHN"
+                  class="cart-products__thumb" />
+                <h3 class="cart-products__title">Вытяжное устройство GHN</h3>
+                <span class="cart-products__descr"
+                  >12-72/168 м<sup>3</sup>/ч / гидрорегулируемый расход / от датчика
+                  присутствия</span
+                ><span class="cart-products__article">Артикул: G2H1065</span>
+                <div class="cart-products__controls count-controls">
+                  <button class="count-controls__btn count-controls__btn--minus" type="button">
+                    <span class="visually-hidden">Убрать единицу товара</span>
+                  </button>
+                  <input
+                    class="count-controls__prod-count"
+                    type="number"
+                    name="count-p3"
+                    min="1"
+                    max="99"
+                    value="1" />
+                  <button class="count-controls__btn count-controls__btn--plus" type="button">
+                    <span class="visually-hidden">Добавить единицу товара</span>
+                  </button>
+                </div>
+                <span class="cart-products__price-one">12 644 ₽/шт.</span>
+                <div class="cart-products__total">12 644 ₽</div>
+                <button type="button" class="cart-products__btn-delete">
+                  <span class="visually-hidden">Удалить с товар с корзины</span>
+                </button>
+              </li>
+            </ul>
+            <label class="cart__setup-label">
+              <input class="cart__setup-check" type="checkbox" name="with_setup" />
+              <span class="cart__setup-title">Установка</span>
+              <span class="cart__setup-descr"
+                >Отметьте, если Вам необходима консультация профессионала по монтажу выбранных
+                товаров.</span
+              >
+            </label>
+            <section class="cart__summary cart-summary">
+              <h3 class="cart-summary__title">Итого</h3>
+              <dl class="cart-summary__dl">
+                <div class="cart-summary__list-wrap">
+                  <dt class="cart-summary__dt">Сумма заказа</dt>
+                  <dd class="cart-summary__dd">50 576 ₽</dd>
+                </div>
+                <div class="cart-summary__list-wrap">
+                  <dt class="cart-summary__dt">Количество</dt>
+                  <dd class="cart-summary__dd">4 шт</dd>
+                </div>
+                <div class="cart-summary__list-wrap">
+                  <dt class="cart-summary__dt">Установка</dt>
+                  <dd class="cart-summary__dd">Нет</dd>
+                </div>
+              </dl>
+              <div class="cart-summary__total-wrap">
+                <span class="cart-summary__total-descr">Стоимость товаров</span>
+                <span class="cart-summary__total-price">50 576 ₽</span>
+              </div>
+              <button class="btn btn--primary cart-summary__btn-submit" type="submit">
+                Оформить заказ
+              </button>
+              <button class="btn btn--secondary cart-summary__btn-buy">Купить в 1 клик</button>
+            </section>
+          </form>
+        </section>
+        <article class="last-products">
+          <h2 class="last-products__title">Просмотренные товары</h2>
+          <div class="last-products__controls slider-controls">
+            <button class="slider-controls__prev" type="button">
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <span class="slider-controls__num-page">1</span>
+            <span class="slider-controls__of-page">/6</span>
+            <button class="slider-controls__prev" type="button">
+              <span class="visually-hidden">Вперед</span>
+            </button>
+          </div>
+          <div class="last-products__slider">
+            <ul class="last-products__list list-reset">
+              <li class="last-products__item list-reset">
+                <article class="last-products__card card">
+                  <h3 class="card__title">G2H</h3>
+                  <img src="img/products/pb1.png" alt="Описание товара" class="card__img" />
+                  <span class="card__descr"
+                    >Вытяжное устройство для механической системы вентиляции</span
+                  >
+                  <span class="card__current-price">6 848 ₽ – 56 584 ₽ </span>
+                  <span class="card__orig-price">77.60 € – 643.86 €</span>
+                  <a href="#" class="card__link btn btn--primary"></a>
+                </article>
+              </li>
+              <li class="last-products__item">
+                <article class="last-products__card card">
+                  <h3 class="card__title">G2H</h3>
+                  <img src="img/products/pb2.png" alt="Описание товара" class="card__img" />
+                  <span class="card__descr"
+                    >Вытяжное устройство для механической системы вентиляции</span
+                  >
+                  <span class="card__current-price">6 848 ₽ – 56 584 ₽ </span>
+                  <span class="card__orig-price">77.60 € – 643.86 €</span>
+                  <a href="#" class="card__link btn btn--primary"></a>
+                </article>
+              </li>
+              <li class="last-products__item">
+                <article class="last-products__card card">
+                  <h3 class="card__title">G2H</h3>
+                  <img src="img/products/pb3.png" alt="Описание товара" class="card__img" />
+                  <span class="card__descr"
+                    >Вытяжное устройство для механической системы вентиляции</span
+                  >
+                  <span class="card__current-price">6 848 ₽ – 56 584 ₽ </span>
+                  <span class="card__orig-price">77.60 € – 643.86 €</span>
+                  <a href="#" class="card__link btn btn--primary"></a>
+                </article>
+              </li>
+              <li class="last-products__item">
+                <article class="last-products__card card">
+                  <h3 class="card__title">G2H</h3>
+                  <img src="img/products/pb4.png" alt="Описание товара" class="card__img" />
+                  <span class="card__descr"
+                    >Вытяжное устройство для механической системы вентиляции</span
+                  >
+                  <span class="card__current-price">6 848 ₽ – 56 584 ₽ </span>
+                  <span class="card__orig-price">77.60 € – 643.86 €</span>
+                  <a href="#" class="card__link btn btn--primary"></a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
 </html>
