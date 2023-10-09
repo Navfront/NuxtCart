@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold"), url("fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato SemiBold"), url("fonts/Lato-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Medium"), url("fonts/Lato-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Regular"), url("fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url("fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), url("fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url("fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 320px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 145%;
+  color: #1f2432;
+  background-color: #fff;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+a,
+input,
+select,
+button {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 80px;
+  margin: 0 auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */
