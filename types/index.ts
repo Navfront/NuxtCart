@@ -16,3 +16,10 @@ export interface ICart {
   products: ICartProduct[]
   withSetup: boolean
 }
+
+export interface IStore {
+  token: string
+  products: ICartProduct[]
+  withSetup: boolean
+  isLoading: boolean
+}
