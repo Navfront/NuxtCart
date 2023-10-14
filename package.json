@@ -11,8 +11,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@types/uuid": "^9.0.5",
     "nuxt": "^3.7.4",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuex": "4.0.2"
+  },
+  "dependencies": {
+    "uuid": "9.0.1"
   }
 }
