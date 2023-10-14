@@ -6,5 +6,5 @@ export default defineEventHandler(async event => {
   const { token } = useBearer(event)
   const { getOrCreateCartById } = useCartStorage()
 
-  return await asyncDelay(1000, getOrCreateCartById, token)
+  return await asyncDelay(500, getOrCreateCartById, token)
 })

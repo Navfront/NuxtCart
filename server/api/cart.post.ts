@@ -5,13 +5,17 @@ import asyncDelay from './../composables/use-async-delay'
 
 export default defineEventHandler(async event => {
   const { token } = useBearer(event)
-  const { id, setup } = await readBody<{ id?: string; setup?: boolean }>(event)
+  const { id, setup, count } = await readBody<{
+    id?: string
+    setup?: boolean
+    count?: string
+  }>(event)
 
-  const { addProductById, setWithSetup } = useCartStorage()
+  const { setCountProductById, setWithSetup } = useCartStorage()
 
   let cart: ICart | null = null
-  if (id) {
-    cart = await asyncDelay(500, addProductById, token, id)
+  if (id && count) {
+    cart = await asyncDelay(500, setCountProductById, token, id, count)
   }
   if (setup) {
     cart = await asyncDelay(500, setWithSetup, token, setup)

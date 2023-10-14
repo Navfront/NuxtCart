@@ -4,9 +4,13 @@ import asyncDelay from './../composables/use-async-delay'
 
 export default defineEventHandler(async event => {
   const { token } = useBearer(event)
-  const { id } = await readBody<{ id: string }>(event)
+  const { id, all } = await readBody<{ id?: string; all?: boolean }>(event)
 
-  const { removeProductById } = useCartStorage()
-
-  return await asyncDelay(1000, removeProductById, token, id)
+  const { deleteProductById, deleteAllProducts } = useCartStorage()
+  if (all) {
+    return await asyncDelay(1500, deleteAllProducts, token)
+  }
+  if (id) {
+    return await asyncDelay(1500, deleteProductById, token, id)
+  }
 })
