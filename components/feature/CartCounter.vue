@@ -37,7 +37,10 @@ const { currentCount, increment, decrement } = useCounter(count, (ref) => {
 }, (ref) => {
     store.dispatch('setProdCount', { prodId, count: ref.value })
 })
-
-
-
 </script>
+
+<style scoped>
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+</style>
