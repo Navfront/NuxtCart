@@ -4,15 +4,24 @@ export interface IProduct {
   descr: string
   article: string
   img: string
-  price: number
+  priceFrom: number
+  priceTo: number
 }
 
-export interface ICartProduct extends Pick<IProduct, 'id'> {
+export interface ICartProduct extends Omit<IProduct, 'priceFrom' | 'priceTo'> {
   count: number
+  price: number
 }
 
 export interface ICart {
   id: string
   products: ICartProduct[]
   withSetup: boolean
+  lastSeenProducts: IProduct[]
+  cartMessage: string
+}
+
+export interface IStore extends Omit<ICart, 'id'> {
+  token: string
+  isLoading: boolean
 }

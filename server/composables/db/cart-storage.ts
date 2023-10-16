@@ -5,13 +5,14 @@ export default function useCartStorage () {
 
   async function getOrCreateCartById (token: string) {
     const cart = await storage.getItem(token)
-
     if (!cart) {
-      const newCart = {
+      const newCart: ICart = {
         id: token,
-        products: [],
-        withSetup: false
+        products: generateProduct(Math.round(Math.random() * 4 + 1), false),
+        withSetup: false,
+        lastSeenProducts: generateProduct(24, true)
       }
+
       await storage.setItem(token, newCart)
       return newCart
     } else {
@@ -19,26 +20,27 @@ export default function useCartStorage () {
     }
   }
 
-  async function addProductById (token: string, prodId: string) {
+  async function setCountProductById (
+    token: string,
+    prodId: string,
+    count: number
+  ) {
     const cart = await getOrCreateCartById(token)
+
     const prodCondidate = cart.products.find(p => p.id === prodId)
     if (prodCondidate) {
-      prodCondidate.count++
+      prodCondidate.count = count
     } else {
-      cart.products.push({ id: prodId, count: 1 })
+      cart.products.push({ ...generateProduct(1, false)[0], count })
     }
     await storage.setItem(token, cart)
     return cart
   }
 
-  async function removeProductById (token: string, prodId: string) {
+  async function deleteProductById (token: string, prodId: string) {
     const cart = await getOrCreateCartById(token)
-    const prodCondidate = cart.products.find(p => p.id === prodId)
-    if (prodCondidate && prodCondidate.count > 1) {
-      prodCondidate.count--
-    } else {
-      cart.products = cart.products.filter(p => p.id !== prodId)
-    }
+    cart.products = cart.products.filter(p => p.id !== prodId)
+    await storage.setItem(token, cart)
     return cart
   }
 
@@ -49,10 +51,18 @@ export default function useCartStorage () {
     return cart
   }
 
+  async function deleteAllProducts (token: string) {
+    const cart = await getOrCreateCartById(token)
+    cart.products = []
+    storage.setItem(token, cart)
+    return cart
+  }
+
   return {
     getOrCreateCartById,
-    addProductById,
-    removeProductById,
-    setWithSetup
+    setCountProductById,
+    deleteProductById,
+    setWithSetup,
+    deleteAllProducts
   }
 }
