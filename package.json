@@ -4,7 +4,6 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "build:nitro": "NITRO_PRESET=aws_lambda nitro build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
