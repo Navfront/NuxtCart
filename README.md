@@ -1,76 +1,26 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Cart
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Стек:
 
-## Setup
+- Nuxt 3 ssr
+- Верстка по BEM
+- Typescript
+- Vuex
+- Swiper.js
+- Feature Sliced Design \* (На сколько позволяет nuxt3)
 
-Make sure to install the dependencies:
+## Реализовано:
 
-```bash
-# npm
-npm install
+- Вывод товаров и их удаление
+- Реализовать кнопочки увеличения/уменьшения кол-ва
+- Динамические подсчет стоимости заказа, количества товаров, наличие установки, в зависимости от
+  состояния чек-бокса
+- В шапке выводить кол-во товаров и стоимость заказа
+- Реализовать слайдер с товарами (воспользуйтесь Swiper.js)
+- При нажатии “Купить в 1 клик” реализовать отправку на сервер
+- Серверное api генерирует корзину
+- Отзывчивость интерактивных элементов (debounce)
 
-# pnpm
-pnpm install
+<a href="https://pet.navfront.ru">Ссылка на деплой: https://pet.navfront.ru</a>
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# NuxtCart
+<img src="./mocks/screen.jpg"/>
