@@ -2,7 +2,7 @@
     <li class="cart-products__item cart-prod">
         <img :src="img" :alt="title" class="cart-prod__thumb" />
         <h3 class="cart-prod__title">{{ title }}</h3>
-        <span class="cart-prod__descr">{{ descr }}</span>
+        <span class="cart-prod__descr"><span v-html="descr"></span></span>
         <span class="cart-prod__article">Артикул: {{ article }}</span>
 
         <div class="cart-prod__controls count-controls">
